@@ -1,0 +1,25 @@
+# Exemple de configuration Fail2ban pour le serveur reverse proxy
+# Valeurs fictives : à adapter avant tout usage.
+
+[DEFAULT]
+# Adresses qui ne sont jamais bannies (le réseau local et le VPN)
+ignoreip = 127.0.0.1/8 <RESEAU_LAN> <RESEAU_VPN>
+
+# Durée du bannissement : 1 heure
+bantime  = 1h
+
+# Fenêtre d'observation : 10 minutes
+findtime = 10m
+
+# Nombre d'échecs tolérés avant le bannissement
+maxretry = 5
+
+[sshd]
+enabled = true
+port    = ssh
+logpath = %(sshd_log)s
+
+[nginx-http-auth]
+enabled = true
+port    = http,https
+logpath = /var/log/nginx/error.log
