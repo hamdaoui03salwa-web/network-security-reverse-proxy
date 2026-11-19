@@ -34,7 +34,6 @@ Audits réalisés avec **Nmap**, **Nikto** et **OpenSSL** sur des serveurs Linux
 
 - `docs/` : architecture avant / après (schémas anonymisés)
 - `configs/` : exemples de configuration NGINX, UFW, Fail2ban (valeurs fictives)
-- `simulation/` : maquette Cisco Packet Tracer
 
 ## ⚠️ Note
 
